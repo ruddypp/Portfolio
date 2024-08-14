@@ -177,14 +177,17 @@
       <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12 border-solid border-2 border-black" data-aos="fade-left"
       data-aos-offset="300"
       data-aos-easing="ease-in-sine" id="contact">
-        <form action="#" class="space-y-4">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+          <input type="hidden" name="access_key" value="105a6ade-74c5-4f88-af60-39b51a693a9d">
+
           <div>
             <label class="sr-only" for="name">Name</label>
             <input
               class="w-full rounded-lg border-gray-200 p-3 text-sm"
               placeholder="Name"
               type="text"
-              id="name"
+              name="name"
+              required
             />
           </div>
 
@@ -195,21 +198,10 @@
                 class="w-full rounded-lg border-gray-200 p-3 text-sm"
                 placeholder="Email address"
                 type="email"
-                id="email"
+                name="email"
+                required
               />
             </div>
-
-            <div>
-              <label class="sr-only" for="phone">Phone</label>
-              <input
-                class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                placeholder="Phone Number"
-                type="tel"
-                id="phone"
-              />
-            </div>
-          </div>
-
 
           <div>
             <label class="sr-only" for="message">Message</label>
@@ -218,7 +210,8 @@
               class="w-full rounded-lg border-gray-200 p-3 text-sm"
               placeholder="Message"
               rows="8"
-              id="message"
+              name="message"
+              required
             ></textarea>
           </div>
 
