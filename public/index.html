@@ -7,7 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<body class="bg-white font-mono">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <body class="bg-white font-mono">
+      <div id="particles-js" class="absolute inset-0 -z-10"></div>
     <main>
   <!-- Hero Section-->
           <div class="mt-9">
@@ -29,6 +32,7 @@
                 </div>
               </div>
             </div>
+            
 <div class="max-w-7xl mx-auto relative" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
   <div class="relative py-16 flex justify-center px-4 sm:px-0">
     <div class="max-w-3xl text-center">
@@ -402,5 +406,62 @@
 </script>
 <script src="/particlejs/particles.js"></script>
 <script src="/particlejs/app.js"></script>
+<script>
+  particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.json', function() {
+      console.log('Particles.js loaded - callback');
+  });
+
+  particlesJS("particles-js", {
+      "particles": {
+          "number": {
+              "value": 80,
+              "density": {
+                  "enable": true,
+                  "value_area": 800
+              }
+          },
+          "color": { "value": "#000000" },
+          "shape": {
+              "type": "circle",
+              "stroke": { "width": 0, "color": "#000000" },
+              "polygon": { "nb_sides": 5 }
+          },
+          "opacity": {
+              "value": 0.5,
+              "random": false,
+              "anim": { "enable": false }
+          },
+          "size": {
+              "value": 3,
+              "random": true,
+              "anim": { "enable": false }
+          },
+          "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#000000",
+              "opacity": 0.4,
+              "width": 1
+          },
+          "move": {
+              "enable": true,
+              "speed": 6,
+              "direction": "none",
+              "random": false,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false
+          }
+      },
+      "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+              "onhover": { "enable": true, "mode": "repulse" },
+              "onclick": { "enable": true, "mode": "push" }
+          }
+      },
+      "retina_detect": true
+  });
+</script>
 </body>
 </html>
